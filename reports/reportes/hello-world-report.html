@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Result</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Test Result</h2>
+                <p class='attribute'><strong>Start Time: </strong>2023-02-04 10:38:21</p>
+                <p class='attribute'><strong>Duration: </strong>23.079s</p>
+                <p class='attribute'><strong>Status: </strong>Error: 1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>reportes</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                            <tr class='warning'>
+                                <td class="col-xs-9">setUpClass (__main__.helloword)</td>
+                                <td class="col-xs-3">
+                                    <span class="label label-warning">
+                                        
+                                            Error
+                                        
+                                    </span>
+                                    
+                                        &nbsp<button class="btn btn-default btn-xs">View</button>
+                                    
+                                </td>
+                            </tr>
+                            
+                                <tr style="display:none;">
+                                    <td class="col-xs-9">
+                                        <p>SessionNotCreatedException</p>
+                                        <p>Message: session not created: This version of ChromeDriver only supports Chrome version 107
+Current browser version is 109.0.5414.120 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x0034ACD3+2075859]
+	Ordinal0 [0x002DEE61+1633889]
+	Ordinal0 [0x001DB7BD+571325]
+	Ordinal0 [0x001FDFCD+712653]
+	Ordinal0 [0x001F9266+692838]
+	Ordinal0 [0x001F6BE9+682985]
+	Ordinal0 [0x0022DBD3+908243]
+	Ordinal0 [0x0022D6AA+906922]
+	Ordinal0 [0x00227136+880950]
+	Ordinal0 [0x001FFEFD+720637]
+	Ordinal0 [0x00200F3F+724799]
+	GetHandleVerifier [0x005FEED2+2769538]
+	GetHandleVerifier [0x005F0D95+2711877]
+	GetHandleVerifier [0x003DA03A+521194]
+	GetHandleVerifier [0x003D8DA0+516432]
+	Ordinal0 [0x002E682C+1665068]
+	Ordinal0 [0x002EB128+1683752]
+	Ordinal0 [0x002EB215+1683989]
+	Ordinal0 [0x002F6484+1729668]
+	BaseThreadInitThunk [0x75937D69+25]
+	RtlInitializeExceptionChain [0x7745BB9B+107]
+	RtlClearBits [0x7745BB1F+191]
+</p>
+                                    </td>
+                                </tr>
+                            
+                        
+                        <tr>
+                            <td>
+                               Total Test Runned: 1
+                            </td>
+                            <td>
+                                <span>Error: 1</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html>
